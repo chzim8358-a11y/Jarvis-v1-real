@@ -1,1 +1,5 @@
-streamlit
+fastapi
+uvicorn
+jinja2
+psutil
+pydantic

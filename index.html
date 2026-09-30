@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JARVIS V2</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="scan"></div>
+<header>
+  <div class="brand"><span class="orb"></span><div><b>JARVIS</b><small>VERSION 2.0 // CORE ONLINE</small></div></div>
+  <div class="status"><i></i> SISTEMAS ONLINE</div>
+</header>
+
+<main>
+<section class="hero panel">
+  <div>
+    <span class="eyebrow">INTELLIGENT COMMAND CENTER</span>
+    <h1>JARVIS <strong>V2</strong></h1>
+    <p>Seu centro de comando para IA, automações autorizadas, memória e monitoramento.</p>
+    <button onclick="focusChat()">ABRIR COMANDO</button>
+  </div>
+  <div class="core"><div class="core-ring">J</div><span>CORE<br>ACTIVE</span></div>
+</section>
+
+<section class="grid">
+  <div class="panel metric"><span>CPU</span><b id="cpu">--%</b><div class="bar"><em id="cpuBar"></em></div></div>
+  <div class="panel metric"><span>RAM</span><b id="ram">--%</b><div class="bar"><em id="ramBar"></em></div></div>
+  <div class="panel metric"><span>PLATAFORMA</span><b id="platform">--</b><small id="uptime">Uptime --</small></div>
+  <div class="panel metric"><span>MÓDULOS</span><b id="moduleCount">--</b><small>ativos / preparados</small></div>
+</section>
+
+<section class="lower">
+  <div class="panel modules">
+    <div class="title">MÓDULOS <span>LIVE</span></div>
+    <div id="modules"></div>
+  </div>
+
+  <div class="panel chat">
+    <div class="title">JARVIS CHAT <span>SECURE</span></div>
+    <div id="messages" class="messages"><div class="jarvis msg">Sistemas iniciados. Estou pronto.</div></div>
+    <div class="inputrow">
+      <input id="input" placeholder="Digite um comando..." onkeydown="if(event.key==='Enter')send()">
+      <button onclick="send()">➤</button>
+    </div>
+  </div>
+</section>
+</main>
+<script src="/static/app.js"></script>
+</body>
+</html>
